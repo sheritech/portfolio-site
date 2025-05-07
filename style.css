@@ -1,0 +1,158 @@
+/* Paste this into your style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+  }
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 0;
+  }
+  header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+    position: relative;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+  header .title {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  .btn {
+    background: white;
+    color: #2575fc;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+  .btn:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+  }
+  section {
+    padding: 60px 0;
+  }
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .skills-grid, .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .skill-card, .project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 160px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .skill-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+  }
+  form input, form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  form button {
+    cursor: pointer;
+  }
+  footer {
+    background: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  .nav-links li a:hover {
+    color: #f0f0f0;
+  }
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  .burger .line {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 5%;
+      background-color: #2575fc;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .burger {
+      display: flex;
+    }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
